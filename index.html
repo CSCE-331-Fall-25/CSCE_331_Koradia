@@ -8,41 +8,51 @@
 </head>
 
 <body class="home">
-  <nav>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="projects.html">Portfolio</a></li>
-      <li><a href="resume.html">Qualifications</a></li>
-      <li><a href="volunteering.html">Volunteering</a></li>
-      <li><a href="photos.html">Photography</a></li>
-    </ul>
-  </nav>
+  <div class="nav-toggle">
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="projects.html">Portfolio</a></li>
+        <li><a href="resume.html">Qualifications</a></li>
+        <li><a href="volunteering.html">Volunteering</a></li>
+        <li><a href="photos.html">Photography</a></li>
+      </ul>
+    </nav>
 
-  <button>Toggle Theme</button>
+    <label class="switch">
+      <input class="toggle" type="checkbox" />
+      <span class="slider"></span>
+      <span class="card-side"></span>
+    </label>
+  </div>
+
   <div>
     <h3>Het Koradia</h3>
     <img src="images/pfp.jpg" alt="Het Koradia" width="500" height="auto" class="pfp">
+    <div class="text-bubble">Hey there! 👋<br>Welcome to my site!</div>
   </div>
-  <p>
-    Whether it's tackling a team project, learning a new program, or taking my camera into unexplored places, I always love to embrace a good challenge and push myself to give my 110%.
-    Such a mindset has not only proven to be an invaluable skill in the classroom but also in the real world.
-    Having completed two internships at Capital One, I can say that my drive to learn and conquer has allowed me to stand out from the rest of the interns.
-    I've learnt the fundamentals of computer science with programming languages like C++ and Python, and this has allowed me to tackle much more complex skills such as machine learning and computer vision, both of which I hope to one day pursue a career in.
-  </p>
-  <p>
-    Apart from just my schooling, I've made multiple projects ranging from a variety of skill sets.
-    My journey began with creating a simple platformer game with Java Spring Boot.
-    Moving on, I learnt basic Android development and simple database design, deepening my understanding of what goes into software development.
-    Soon after, I tried my hand at backend and cloud technologies while also implementing API calls from third-party websites to create beautiful frontend pages.
-    Venturing into hardware integration, I constructed a DIY Security System; this Raspberry Pi-powered device uses Python and OpenCV to deliver real-time object detection and automates cloud backups via Google Drive API.
-    Most recently, I led full-stack development for Connect Campus, a housing platform supporting 100+ TAMU students.
-    Leveraging Docker, AWS EC2, and PostgreSQL, I built a secure, scalable solution with responsive Next.js user interfaces and robust JWT authentication.
-  </p>
-  <p>
-    In my free time, I love exploring, whether that's mountain tops, caves, or even jaw-dropping cities.
-    A recent hobby that I have picked up is photography (still trying to learn, so if you have any tips, I'd love to hear them).
-    Apart from these, I also love cooking, and my favorite thing to make is egg fried rice.
-  </p>
+  <div class="about-me">
+    <p>
+      Whether it's tackling a team project, learning a new program, or taking my camera into unexplored places, I always love to embrace a good challenge and push myself to give my 110%.
+      Such a mindset has not only proven to be an invaluable skill in the classroom but also in the real world.
+      Having completed two internships at Capital One, I can say that my drive to learn and conquer has allowed me to stand out from the rest of the interns.
+      I've learnt the fundamentals of computer science with programming languages like C++ and Python, and this has allowed me to tackle much more complex skills such as machine learning and computer vision, both of which I hope to one day pursue a career in.
+    </p>
+    <p>
+      Apart from just my schooling, I've made multiple projects ranging from a variety of skill sets.
+      My journey began with creating a simple platformer game with Java Spring Boot.
+      Moving on, I learnt basic Android development and simple database design, deepening my understanding of what goes into software development.
+      Soon after, I tried my hand at backend and cloud technologies while also implementing API calls from third-party websites to create beautiful frontend pages.
+      Venturing into hardware integration, I constructed a DIY Security System; this Raspberry Pi-powered device uses Python and OpenCV to deliver real-time object detection and automates cloud backups via Google Drive API.
+      Most recently, I led full-stack development for Connect Campus, a housing platform supporting 100+ TAMU students.
+      Leveraging Docker, AWS EC2, and PostgreSQL, I built a secure, scalable solution with responsive Next.js user interfaces and robust JWT authentication.
+    </p>
+    <p>
+      In my free time, I love exploring, whether that's mountain tops, caves, or even jaw-dropping cities.
+      A recent hobby that I have picked up is photography (still trying to learn, so if you have any tips, I'd love to hear them).
+      Apart from these, I also love cooking, and my favorite thing to make is egg fried rice.
+    </p>
+  </div>
 
 </body>
 
