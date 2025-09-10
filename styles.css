@@ -37,6 +37,11 @@ body.volunteering {
   background-image: url("images/volunteeringBG.jpg");
 }
 
+/* Photos page background */
+body.photos {
+  background-image: url("images/homeBG.jpg");
+}
+
 div.nav-toggle {
   position: fixed;
   top: 40px;
@@ -156,6 +161,106 @@ div:has(.pfp) h3 {
   50% {
     transform: translateY(-5px);
   }
+}
+
+/* Common Page Styling */
+h1 {
+  font-family: "Pixel", monospace;
+  color: #ffffff;
+  background-color: #2a2a2a;
+  padding: 15px 25px;
+  border: 4px solid #6ab767;
+  border-radius: 15px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  margin: 20px auto;
+  max-width: 600px;
+}
+
+h2 {
+  font-family: "Pixel", monospace;
+  color: #ffffff;
+  background-color: #3a3a3a;
+  padding: 10px 20px;
+  border: 3px solid #6ab767;
+  border-radius: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 15px 0 10px 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+section {
+  background-color: #2a2a2a;
+  border: 3px solid #6ab767;
+  border-radius: 15px;
+  padding: 20px;
+  margin: 20px 0;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+ul.community-service {
+  list-style: none;
+  padding: 0;
+}
+
+li.community-service {
+  background-color: #3a3a3a;
+  color: #ffffff;
+  font-family: "Pixel", monospace;
+  padding: 10px 15px;
+  margin: 8px 0;
+  border: 2px solid #6ab767;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  transition: all 0.2s ease;
+}
+
+li:hover.community-service {
+  background-color: #6ab767;
+  color: #000000;
+  transform: translateX(5px);
+}
+
+button {
+  background-color: #2a2a2a;
+  border: 3px solid #6ab767;
+  border-radius: 10px;
+  padding: 12px 20px;
+  margin: 10px;
+  font-family: "Pixel", monospace;
+  font-size: 14px;
+  font-weight: bold;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+button:hover {
+  background-color: #6ab767;
+  color: #000000;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(106, 183, 103, 0.4);
+}
+
+button a {
+  color: inherit;
+  text-decoration: none;
+}
+
+iframe {
+  border: 3px solid #6ab767;
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  margin: 20px 0;
 }
 /* Pixel-style Navigation Bar */
 nav {
@@ -307,4 +412,372 @@ nav a:active {
 
 .toggle:checked + .slider:before {
   transform: translateX(32px);
+}
+
+/* Pixelated Skills Section */
+.pixel-skills {
+  background-color: #1a1a1a;
+  border: 4px solid #6ab767;
+  border-radius: 0;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 900px;
+  box-shadow: 0 0 0 2px #000000, 0 0 0 4px #6ab767,
+    0 8px 16px rgba(0, 0, 0, 0.5);
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+}
+
+.pixel-title {
+  font-family: "Pixel", monospace;
+  color: #ffffff;
+  background-color: #2a2a2a;
+  padding: 15px 20px;
+  border: 3px solid #6ab767;
+  border-radius: 0;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  box-shadow: 0 0 0 2px #000000, 0 0 0 4px #6ab767;
+  margin: 0 0 20px 0;
+  font-size: 18px;
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+}
+
+.pixel-group {
+  margin: 20px 0;
+  background-color: #2a2a2a;
+  border: 2px solid #6ab767;
+  border-radius: 0;
+  padding: 15px;
+  box-shadow: 0 0 0 1px #000000, 0 0 0 3px #6ab767;
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+}
+
+.pixel-subtitle {
+  font-family: "Pixel", monospace;
+  color: #6ab767;
+  background-color: #1a1a1a;
+  padding: 8px 12px;
+  border: 2px solid #6ab767;
+  border-radius: 0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 0 0 15px 0;
+  font-size: 14px;
+  display: inline-block;
+  box-shadow: 0 0 0 1px #000000, 0 0 0 3px #6ab767;
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+}
+
+.pixel-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.pixel-box {
+  font-family: "Pixel", monospace;
+  color: #ffffff;
+  background-color: #3a3a3a;
+  border: 2px solid #6ab767;
+  border-radius: 0;
+  padding: 6px 12px;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: inline-block;
+  box-shadow: 0 0 0 1px #000000, 0 0 0 3px #6ab767,
+    inset 0 2px 0 rgba(255, 255, 255, 0.1);
+  transition: all 0.2s ease;
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+  position: relative;
+}
+
+.pixel-box:hover {
+  background-color: #6ab767;
+  color: #000000;
+  transform: translateY(-2px);
+  box-shadow: 0 0 0 1px #000000, 0 0 0 3px #6ab767,
+    0 4px 8px rgba(106, 183, 103, 0.4), inset 0 2px 0 rgba(255, 255, 255, 0.2);
+}
+
+.pixel-box:active {
+  transform: translateY(0);
+  box-shadow: 0 0 0 1px #000000, 0 0 0 3px #6ab767,
+    inset 0 2px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* Pixelated grid pattern overlay */
+.pixel-skills::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: linear-gradient(
+      rgba(106, 183, 103, 0.1) 1px,
+      transparent 1px
+    ),
+    linear-gradient(90deg, rgba(106, 183, 103, 0.1) 1px, transparent 1px);
+  background-size: 20px 20px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.pixel-skills {
+  position: relative;
+  z-index: 2;
+}
+
+/* Responsive design for pixel skills */
+@media (max-width: 768px) {
+  .pixel-skills {
+    margin: 20px 10px;
+    padding: 15px;
+  }
+
+  .pixel-title {
+    font-size: 16px;
+    padding: 12px 15px;
+  }
+
+  .pixel-subtitle {
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+
+  .pixel-box {
+    font-size: 10px;
+    padding: 4px 8px;
+  }
+
+  .pixel-list {
+    gap: 6px;
+  }
+}
+
+/* Resume Page Specific Styling */
+.resume-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.resume-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.resume-pdf-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.pdf-container {
+  background-color: #1a1a1a;
+  border: 4px solid #6ab767;
+  border-radius: 0;
+  padding: 15px;
+  box-shadow: 0 0 0 2px #000000, 0 0 0 4px #6ab767,
+    0 8px 16px rgba(0, 0, 0, 0.5);
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+  position: relative;
+}
+
+.pdf-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: linear-gradient(
+      rgba(106, 183, 103, 0.05) 1px,
+      transparent 1px
+    ),
+    linear-gradient(90deg, rgba(106, 183, 103, 0.05) 1px, transparent 1px);
+  background-size: 15px 15px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.pdf-container iframe {
+  position: relative;
+  z-index: 2;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  background-color: #ffffff;
+}
+
+.resume-actions {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.pixel-button {
+  font-family: "Pixel", monospace;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 12px 20px;
+  border: 3px solid #6ab767;
+  border-radius: 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 0 1px #000000, 0 0 0 3px #6ab767, 0 4px 8px rgba(0, 0, 0, 0.3);
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+  position: relative;
+  overflow: hidden;
+}
+
+.pixel-button.primary {
+  background-color: #6ab767;
+  color: #000000;
+}
+
+.pixel-button.primary:hover {
+  background-color: #5aa55a;
+  transform: translateY(-2px);
+  box-shadow: 0 0 0 1px #000000, 0 0 0 3px #5aa55a,
+    0 6px 12px rgba(90, 165, 90, 0.4);
+}
+
+.pixel-button.secondary {
+  background-color: #2a2a2a;
+  color: #ffffff;
+}
+
+.pixel-button.secondary:hover {
+  background-color: #6ab767;
+  color: #000000;
+  transform: translateY(-2px);
+  box-shadow: 0 0 0 1px #000000, 0 0 0 3px #6ab767,
+    0 6px 12px rgba(106, 183, 103, 0.4);
+}
+
+.pixel-button:active {
+  transform: translateY(0);
+  box-shadow: 0 0 0 1px #000000, 0 0 0 3px #6ab767,
+    inset 0 2px 0 rgba(0, 0, 0, 0.2);
+}
+
+.pixel-button a {
+  color: inherit;
+  text-decoration: none;
+  display: block;
+}
+
+/* Pixelated button press effect */
+.pixel-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: left 0.5s;
+}
+
+.pixel-button:hover::before {
+  left: 100%;
+}
+
+/* Resume page specific h1 styling */
+.resume-container h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 28px;
+  /* background: linear-gradient(45deg, #6ab767, #5aa55a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text; */
+  text-shadow: 2px 2px 0px #000000;
+}
+
+/* Responsive design for resume page */
+@media (max-width: 1024px) {
+  .resume-content {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .resume-pdf-section {
+    order: 1;
+  }
+
+  .pixel-skills {
+    order: 2;
+  }
+}
+
+@media (max-width: 768px) {
+  .resume-container {
+    padding: 10px;
+  }
+
+  .resume-content {
+    gap: 15px;
+  }
+
+  .pdf-container {
+    padding: 10px;
+  }
+
+  .pdf-container iframe {
+    height: 500px;
+  }
+
+  .resume-actions {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .pixel-button {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .resume-container h1 {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .pdf-container iframe {
+    height: 400px;
+  }
+
+  .pixel-button {
+    font-size: 12px;
+    padding: 10px 15px;
+  }
 }
