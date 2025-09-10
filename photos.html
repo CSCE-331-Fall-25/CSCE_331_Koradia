@@ -28,10 +28,129 @@
 
   <h1>Photography Portfolio</h1>
 
-  <section>
-    <h2>Coming Soon</h2>
-    <p>This page will showcase my photography work. Currently under development - stay tuned for amazing shots from my adventures!</p>
-  </section>
+  <div class="photo-gallery">
+    <!-- First carousel - scrolling left to right -->
+    <div class="carousel-track" id="carousel-track-1">
+      <!-- First set of images -->
+      <div class="photo-item" data-image="images/portfolio/DSC00029.JPG">
+        <img src="images/portfolio/DSC00029.JPG" alt="Photography 1" loading="lazy">
+      </div>
+      
+      <div class="photo-item" data-image="images/portfolio/DSC00058.JPG">
+        <img src="images/portfolio/DSC00058.JPG" alt="Photography 2" loading="lazy">
+      </div>
+      
+      <div class="photo-item" data-image="images/portfolio/DSC00118.JPG">
+        <img src="images/portfolio/DSC00118.JPG" alt="Photography 3" loading="lazy">
+      </div>
+      
+      <div class="photo-item" data-image="images/portfolio/DSC09890.JPG">
+        <img src="images/portfolio/DSC09890.JPG" alt="Photography 4" loading="lazy">
+      </div>
+      
+      <div class="photo-item" data-image="images/portfolio/DSC09937.JPG">
+        <img src="images/portfolio/DSC09937.JPG" alt="Photography 5" loading="lazy">
+      </div>
+      
+      <!-- Duplicate set for seamless loop -->
+      <div class="photo-item" data-image="images/portfolio/DSC00029.JPG">
+        <img src="images/portfolio/DSC00029.JPG" alt="Photography 1" loading="lazy">
+      </div>
+      
+      <div class="photo-item" data-image="images/portfolio/DSC00058.JPG">
+        <img src="images/portfolio/DSC00058.JPG" alt="Photography 2" loading="lazy">
+      </div>
+      
+      <div class="photo-item" data-image="images/portfolio/DSC00118.JPG">
+        <img src="images/portfolio/DSC00118.JPG" alt="Photography 3" loading="lazy">
+      </div>
+      
+      <div class="photo-item" data-image="images/portfolio/DSC09890.JPG">
+        <img src="images/portfolio/DSC09890.JPG" alt="Photography 4" loading="lazy">
+      </div>
+      
+      <div class="photo-item" data-image="images/portfolio/DSC09937.JPG">
+        <img src="images/portfolio/DSC09937.JPG" alt="Photography 5" loading="lazy">
+      </div>
+    </div>
+    
+
+  <!-- Lightbox Modal -->
+  <div id="lightbox" class="lightbox">
+    <span class="close-btn">&times;</span>
+    <img id="lightbox-img" src="" alt="">
+    <div class="lightbox-nav">
+      <button class="prev-btn">&#8249;</button>
+      <button class="next-btn">&#8250;</button>
+    </div>
+  </div>
+
+  <script>
+    // Lightbox functionality
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const closeBtn = document.querySelector('.close-btn');
+    const prevBtn = document.querySelector('.prev-btn');
+    const nextBtn = document.querySelector('.next-btn');
+    const photoItems = document.querySelectorAll('.photo-item');
+
+    let currentImageIndex = 0;
+    const images = ['images/portfolio/DSC00029.JPG', 'images/portfolio/DSC00058.JPG',
+      'images/portfolio/DSC00118.JPG', 'images/portfolio/DSC09890.JPG',
+      'images/portfolio/DSC09937.JPG'
+    ];
+
+    // Open lightbox when clicking on any image
+    photoItems.forEach((item, index) => {
+      item.addEventListener('click', () => {
+        // Get the actual image index (first 5 items only)
+        const actualIndex = index % 5;
+        currentImageIndex = actualIndex;
+        lightboxImg.src = images[currentImageIndex];
+        lightbox.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      });
+    });
+
+    // Close lightbox
+    closeBtn.addEventListener('click', closeLightbox);
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox) {
+        closeLightbox();
+      }
+    });
+
+    // Lightbox navigation
+    prevBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
+      lightboxImg.src = images[currentImageIndex];
+    });
+
+    nextBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      currentImageIndex = (currentImageIndex + 1) % images.length;
+      lightboxImg.src = images[currentImageIndex];
+    });
+
+    // Keyboard navigation
+    document.addEventListener('keydown', (e) => {
+      if (lightbox.classList.contains('active')) {
+        if (e.key === 'Escape') {
+          closeLightbox();
+        } else if (e.key === 'ArrowLeft') {
+          prevBtn.click();
+        } else if (e.key === 'ArrowRight') {
+          nextBtn.click();
+        }
+      }
+    });
+
+    function closeLightbox() {
+      lightbox.classList.remove('active');
+      document.body.style.overflow = 'auto';
+    }
+  </script>
 
 </body>
 
